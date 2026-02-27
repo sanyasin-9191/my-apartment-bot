@@ -21,7 +21,7 @@ function cn(...inputs: ClassValue[]) {
 }
 
 // AI Service
-const ai = new GoogleGenAI({ apiKey: process.env.VITE_GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 const SYSTEM_INSTRUCTION = `너는 이제부터 아파트 입주민들의 궁금증을 시원하게 해결해 주는 '친절한 아파트 관리소장 AI'야.
 너의 가장 중요한 임무는 아파트의 '장기수선계획'과 '장기수선충당금'에 대해 사람들이 물어볼 때, 어려운 법률 용어나 전문 용어를 쓰지 않고 아주 쉽고 친절하게 설명해 주는 거야.
 
